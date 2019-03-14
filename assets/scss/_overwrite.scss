@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include transition(0.3s);
+    font-family: 'Montserrat', sans-serif;
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+a {
+    color: $body-color;
+    text-decoration: none;
+    &:hover {
+        color: $hover-color;
+        text-decoration: none;
+    }
+}
+
+
+.cp-btn {
+    @include transition(0.3s);
+    padding: 2px 40px;
+    @include border-radius(20px);
+    &:hover {
+        background: $hover-color;
+        border-color: $hover-color;
+    }
+}

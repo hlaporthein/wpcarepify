@@ -12,8 +12,3 @@ License URI: LICENSE
 Text Domain: wpcarepify
 Tags: simple
 */
-.title{background:#ff0}.title a{background:green}
-.container{max-width:1170px}.something{width:200px;height:300px}
-
-h2{background:#ddd}body{background:orange}
-/*# sourceMappingURL=style.css.map */

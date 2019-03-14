@@ -1,0 +1,31 @@
+.services {
+    display: flex;
+    background:url(../img/service.jpg) no-repeat center;
+    .services-content {
+        ul{
+            li{
+                strong{
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bolder;
+                }
+                list-style: none;
+                position:relative;
+                padding:10px;
+                &:before{
+                    top:20px;
+                    position:absolute;
+                    content:'';
+                    left:-30px;
+                    width:20px;
+                    height:2px;
+                    background: $body-color;
+                }
+            }
+        }
+        max-width: 500px;
+        min-height: 400px;
+        padding: 30px;
+        background: white;
+        border: 30px solid #f1f1f1;
+    }
+}

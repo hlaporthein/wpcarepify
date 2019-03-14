@@ -1,0 +1,41 @@
+section.std-section.footer{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+section.footer {
+    min-height: 100px;
+    background: $white;
+    color: $body-color;
+}
+
+.scrollTop {
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    display: none;
+    background: #f6f7f9;
+    bottom: 20px;
+    text-align: center;
+    @include border-radius(100%);
+    width: 60px;
+    height: 60px;
+    opacity: 0.6;
+    border: 1px solid #eee;
+    font-size: 24px;
+    color: $body-color;
+    .fa-arrow-up {
+        margin-left: -10px;
+        margin-top: -12px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+    }
+    &:hover {
+    opacity: 1;
+    @include transition(0.4s);
+    }
+    &:hover .fa-arrow-up{
+        color: $hover-color;
+    }
+}
+

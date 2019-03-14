@@ -1,0 +1,45 @@
+@media (max-width: 576px) {
+    .header {
+        .menu,
+        .mobile {
+            margin: 10px auto !important;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .popup-menu {
+        .container {
+            a {
+                font-size: 12px;
+                &:before {
+                    width: 14px;
+                    height: 2px;
+                    background: #444;
+                    left: -24px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    section{
+    padding-bottom:40px;
+    padding-top:40px;
+    min-height:500px;
+    }
+    .portfolio{
+       .title{
+        display:block;
+        max-height:200px;
+        text-align:center;
+            h1{
+             max-width:200px;
+             margin:0 auto;
+             margin-bottom:20px;
+            }
+        } 
+    }
+}

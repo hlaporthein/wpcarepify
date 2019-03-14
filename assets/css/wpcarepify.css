@@ -1,0 +1,66 @@
+
+/* ---------------------------------------------------
+button
+-----------------------------------------------------*/
+.cp-btn {
+    background: #1379ce;
+    border: 0 none;
+    padding: 5px 15px;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+/* ---------------------------------------------------
+danger color
+-----------------------------------------------------*/
+
+.cp-bg-danger {
+    background: #dc3545;
+}
+a.cp-bg-danger:hover, a.cp-bg-danger:focus,
+button.cp-bg-danger:hover,
+button.cp-bg-danger:focus {
+  background-color: #bd2130 !important;
+}
+
+.cp-alert-danger {
+    background: #fe3f3f;
+    color: #fff;
+}
+
+.cp-alert-danger > a {
+    color: #f3f3f3;
+}
+
+
+
+
+
+/* ---------------------------------------------------
+warning color
+-----------------------------------------------------*/
+.cp-bg-warning {
+    background-color: #ffc107 !important;
+  }
+  
+  a.cp-bg-warning:hover, a.cp-bg-warning:focus,
+  button.cp-bg-warning:hover,
+  button.cp-bg-warning:focus {
+    background-color: #d39e00 !important;
+  }
+
+
+/* ---------------------------------------------------
+component
+-----------------------------------------------------*/
+.cp-fixed-bar {
+    position: fixed;
+    z-index: 1;
+    color: #fff;
+    bottom: 0;
+    padding: 15px 0;
+    width: 100%;
+    left: 0;
+    text-indent: 30px;
+    font-size: 16px;
+}

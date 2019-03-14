@@ -1,0 +1,53 @@
+@mixin zb_transition($property) {
+    transition: $property;
+    -moz-transition: $property;
+    -webkit-transition: $property;
+    -o-transition: $property;
+}
+
+@mixin zb_border_radius($property) {
+    border-radius: $property;
+    -moz-border-radius: $property;
+    -webkit-border-radius: $property;
+    -o-border-radius: $property;
+}
+
+@mixin zb_box_shadow($property) {
+    box-shadow: $property;
+    -moz-box-shadow: $property;
+    -webkit-box-shadow: $property;
+    -o-box-shadow: $property;
+}
+
+@mixin zb_transform($property) {
+    transform:$property;
+    -moz-transform:$property;
+    -webkit-transform:$property;
+    -o-transform:$property;
+}
+
+@mixin  zb_transform_scale($property) {
+    transform: scale($property);
+    -moz-transform: scale($property);
+    -webkit-transform: scale($property);
+    -o-transform: scale($property);
+}
+@mixin zb_menu_icons($bgmargin){
+    background: url('../img/icons.png') no-repeat -4px $bgmargin;
+    width: 40px;
+    height: 40px;
+}
+
+@mixin zb_animation($animate, $time, $effect){
+    animation: $animate $time $effect;
+    -webkit-animation: $animate $time $effect;
+    -moz-animation: $animate $time $effect;
+}
+
+@mixin zb_main_graident_bg() {
+    background: #f45b44;
+    background: -moz-linear-gradient(top, #f45b44 0%, #f4534b 50%, #f34953 100%);
+    background: -webkit-linear-gradient(top, #f45b44 0%,#f4534b 50%,#f34953 100%);
+    background: linear-gradient(to bottom, #f45b44 0%,#f4534b 50%,#f34953 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f45b44', endColorstr='#f34953',GradientType=0 );
+}

@@ -1,0 +1,34 @@
+.about-wrap{
+    position: relative;
+    margin-top:30px;
+    min-height:700px;
+    .about-photo{
+        top:0;
+        left:0;
+        position: absolute;
+        max-width:600px;
+        height:500px;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .about-content{
+        bottom:0;
+        right:0;
+        position: absolute;       
+        max-width:500px;
+        min-height:400px;
+        padding:30px;
+        background:white;
+        border:30px solid #f1f1f1;
+        z-index:1;
+        p{
+          margin-top:30px;
+            strong{
+                font-size:26px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+}

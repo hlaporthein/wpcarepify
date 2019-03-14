@@ -1,0 +1,22 @@
+@mixin transition($time){
+    transition:all ease-in-out $time;
+    -moz-transition:all ease-in-out $time;
+    -webkit-transition:all ease-in-out $time;
+}
+@mixin animation($name,$time){
+    animation:$name linear $time;
+    -moz-animation:$name linear $time;
+    -webkit-animation:$name linear $time;
+}
+
+@mixin border-radius($amount){
+    border-radius:$amount;
+    -moz-border-radius:$amount;
+    -webkit-border-radius:$amount;
+}
+
+@mixin translate-Y($amount){
+   transform: translateY($amount);
+   -moz-transform: translateY($amount);
+   -webkit-transform: translateY($amount);
+}

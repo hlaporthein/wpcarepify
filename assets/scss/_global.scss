@@ -1,0 +1,18 @@
+body {
+    font-family: 'Cardo', serif;
+    font-size: $body-font-size;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+}
+
+section.std-section{
+    padding-bottom: 80px;
+    padding-top: 80px;
+    min-height: 700px;
+}

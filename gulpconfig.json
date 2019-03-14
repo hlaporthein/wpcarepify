@@ -1,0 +1,39 @@
+{
+    "browserSyncOptions": {
+        "proxy": "wpcarepify.dex",
+        "host": "wpcarepify.dex",
+        "notify": false
+    },
+    "browserSyncWatchFiles": [
+        "./*.css",
+        "./assets/js/*.min.js",
+        "./**/*.php"
+    ],
+    "paths": {
+        "assets" : "./assets",
+        "scss": "./assets/scss",
+        "css": "./assets/css",
+        "dist": "./assets/dist/",
+        "wp_stylesheet": "./assets/css/style.css",
+        "normal_css_file_list": [
+            "./assets/css/a.css",
+            "./assets/css/b.css",
+            "./assets/css/c.css"
+        ],
+        "js_file_list": [
+            "./assets/js/a.js",
+            "./assets/js/b.js",
+            "./assets/js/c.js"
+        ],
+        
+        "img": "./img",
+        "imgsrc": "./src/img",
+        "sass": "./sass",
+        "node": "./node_modules/",
+        "bower": "./bower_components/",
+        "dev": "./src",
+        "distprod": "./dist-product",
+        "vendor": ""
+    }
+    
+}

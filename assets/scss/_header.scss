@@ -1,0 +1,71 @@
+section.std-section.header{
+    padding-top:30px;
+}
+.header {
+    background: url(../img/background.jpg) no-repeat bottom center;
+    nav {
+        .menu {
+            max-width: 100px;
+            text-align: center;
+            margin: 0 auto;
+            text-transform: uppercase;
+            position: relative;
+            &:after {
+                position: absolute;
+                top: 10px;
+                left: 0;
+                width: 20px;
+                height: 2px;
+                z-index: 22;
+                display: block;
+                background: $body-color;
+                content: '';
+            }
+            &:before {
+                position: absolute;
+                top: 10px;
+                right: 0;
+                width: 20px;
+                height: 2px;
+                z-index: 22;
+                display: block;
+                background: $body-color;
+                content: '';
+            }
+            &:hover {
+                cursor: pointer;
+                color: $hover-color;
+            }
+            &:hover:before,
+            &:hover:after {
+                background: $hover-color;
+            }
+        }
+        .mobile {
+            a {
+                @include transition(0.3s);
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+            text-align: center;
+        }
+    }
+    .slogan {
+        display: flex;
+        min-height: 540px;
+        h1 {
+            text-align: center;
+            width: 100%;
+            font-size: 56px;
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.logo {
+    font-family: 'Aguafina Script', cursive;
+    text-align: center;
+}

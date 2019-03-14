@@ -1,0 +1,89 @@
+.popup-menu {
+    background: #ffffffe0;
+    display: none;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 999;
+    @include transition(0.8s);
+    .close-btn {
+        position: fixed;
+        color: $body-color;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        &:hover {
+            color: #000;
+            cursor: pointer;
+        }
+        &:hover svg {
+            path {
+                fill: $hover-color;
+            }
+        }
+    }
+    .container {
+        max-width: 1100px;
+        h1 {
+            margin-bottom: 80px;
+        }
+        a.mobile-logo{
+            &:before{
+                display:none;
+            }
+        }
+        a {
+            color: $body-color;
+            text-transform: uppercase;
+            font-size: 20px;
+            margin-left: 40px;
+            position: relative;
+            &:hover {
+                text-decoration: none;
+                color: $hover-color;
+            }
+            &:hover:before {
+                background: $hover-color;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background: $body-color;
+                left: -40px;
+                top: 10px;
+            }
+        }
+    }
+}
+
+.popup-menu.show {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    .close-btn {
+        @include animation(rotateIn, 0.4s);
+    }
+    .container {
+        h1 {
+            @include animation(fadeInUp, 0.4s);
+        }
+        a {
+            @include animation(fadeInDown, 0.4s);
+        }
+    }
+}
+
+.popup-menu.show.out {
+    opacity: 0;
+    visibility: hidden;
+    .close-btn {
+        @include animation(rotateOut, 0.4s);
+    }
+}

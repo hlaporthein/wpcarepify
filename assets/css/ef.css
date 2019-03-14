@@ -1,0 +1,67 @@
+/*
+Theme Name: wpcarepify
+Theme URI: http://carepify.com
+Author: Carepify Team
+Author URI: http://carepify.com
+GitHub Theme URI: https://github.com/hlaporthein/wpcarepify
+Description: wpcarepify theme is developed by carepify team. You could also read documentation in http://github.com/hlaporthein/wpcarepify/wiki/ 
+Requires at least: WordPress 4.9.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wpcarepify
+Tags: simple
+*/
+
+.title-wrapper {
+  text-align: center; }
+  .title-wrapper .title {
+    font-size: 2.5rem;
+    display: inline-block;
+    position: relative; }
+  .title-wrapper.both-line-title .title {
+    padding: 0 60px; }
+  .title-wrapper.right-line-title .title {
+    padding-right: 60px; }
+  .title-wrapper.left-line-title .title {
+    padding-left: 60px; }
+  .title-wrapper.both-line-title .title:before, .title-wrapper.both-line-title .title:after, .title-wrapper.right-line-title .title:after, .title-wrapper.left-line-title .title:before {
+    content: '';
+    display: block;
+    background: #222;
+    height: 2px;
+    width: 40px;
+    top: 50%;
+    position: absolute;
+    margin-top: -1px; }
+  .title-wrapper.both-line-title .title:before, .title-wrapper.left-line-title .title:before {
+    left: 0; }
+  .title-wrapper.both-line-title .title:after, .title-wrapper.right-line-title .title:after {
+    right: 0; }
+  .title-wrapper.right-line-title, .title-wrapper.left-line-title {
+    text-align: left; }
+
+.rad3 {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+body {
+    background: yellow;
+}
+h1 {
+    color: green;
+}
+h2 {
+    color: blue;
+}
+button {
+    background: green;
+}
+p {
+    background: black;
+    color: #fff;
+}
+ul {
+    background: red;
+}
+/*# sourceMappingURL=ef.css.map */
