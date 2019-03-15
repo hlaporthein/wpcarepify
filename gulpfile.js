@@ -5,59 +5,20 @@ var gulpif = require('gulp-if');
 var plumber = require( 'gulp-plumber' );
 var sass = require( 'gulp-sass' );
 var watch = require( 'gulp-watch' );
-var cssnano = require( 'gulp-cssnano' );
-var rename = require( 'gulp-rename' );
+
 var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
-// var merge2 = require( 'merge2' );
-var imagemin = require( 'gulp-imagemin' );
-var ignore = require( 'gulp-ignore' );
-var rimraf = require( 'gulp-rimraf' );
-var clone = require( 'gulp-clone' );
-// var merge = require( 'gulp-merge' );
-var merge = require('merge-stream');
-// var series = require('stream-series');
 var streamqueue = require('streamqueue');
 
 var sourcemaps = require( 'gulp-sourcemaps' );
 var browserSync = require( 'browser-sync' ).create();
 var del = require( 'del' );
 var cleanCSS = require( 'gulp-clean-css' );
-var gulpSequence = require( 'gulp-sequence' );
-var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
-
-gulp.task( 'style', function() {
-        
-    var normal_n_scss =  streamqueue({ objectMode: true },
-            gulp.src( paths.scss + '/*.scss' ).pipe( sass( { errLogToConsole: true } ) ),
-            gulp.src( paths.normal_css_file_list )
-            )
-            .pipe( sourcemaps.init( { loadMaps: true } ) )
-            .pipe(autoprefixer({ browsers: ['last 30 versions'],cascade: false}))
-            .pipe( cleanCSS( { compatibility: '*' } ) )
-            .pipe( plumber( {
-                errorHandler: function( err ) {
-                    console.log( err );
-                    this.emit( 'end' );
-                }
-            } ) );
-
-    var style_file = streamqueue({ objectMode: true },
-        gulp.src(paths.wp_stylesheet),
-        normal_n_scss
-    )
-    .pipe(concat('style.css'))
-    .pipe( sourcemaps.write( './' ) )
-    .pipe( gulp.dest( './' ) );    
-
-    return style_file;
-    
-});
 
 function cp_watch_helper_css_js(enviroment = pro) {
 
@@ -148,6 +109,7 @@ gulp.task('pro-script', function(){
 
 
 gulp.task('pro-watch', function(done){
+    del(['./style.css', './style.css.map', cfg.paths.dist + '/css/*', cfg.paths.dist + '/js/*']);
     cp_watch_helper_css_js('pro');
     browserSync.reload();
     done();
@@ -165,3 +127,4 @@ gulp.task( 'browser-sync', function(done) {
 } );
 
 gulp.task( 'dev', gulp.series('browser-sync', 'dev-watch'));
+gulp.task( 'pro', gulp.series('browser-sync', 'pro-watch'));
