@@ -6,15 +6,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define('CP_ENV', 'development'); //development, production, staging
 
-
 switch ( CP_ENV ) {
 	case 'development':
-	define('CP_TESTING', true);
+	require_once dirname(__FILE__) .'/environment/development.php';
 
 	case 'staging':
-	define('CP_TESTING', true);
+	require_once dirname(__FILE__) .'/environment/staging.php';
 
 	default :
-	define('CP_TESTING', false);
+	require_once dirname(__FILE__) .'/environment/production.php';
 	break;
 }
