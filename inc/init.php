@@ -25,6 +25,7 @@ class Theme_Includes {
 			self::include_child_first( '/filter.php' );
 			self::include_all_child_first( '/helpers' );
 			self::include_all_child_first( '/includes' );
+			self::include_all_child_first( '/plugins' );
 			
 			if ( CP_TESTING == true ) {
 				self::include_all_child_first( '/test' );

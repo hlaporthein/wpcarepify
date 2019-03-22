@@ -19,6 +19,7 @@
             "./assets/css/a.css",
             "./assets/css/b.css",
             "./assets/css/c.css"
+            "./assets/css/wpcarepify.css"
         ],
         "js_file_list": [
             "./assets/js/a.js",

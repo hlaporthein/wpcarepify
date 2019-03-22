@@ -7,4 +7,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * code credit to @unyson
  */
-require_once dirname(__FILE__) .'/inc/init.php';
+
+require_once dirname(__FILE__) .'/fly-dynamic-image-resizer/fly-dynamic-image-resizer.php';
