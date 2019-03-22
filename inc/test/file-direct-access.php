@@ -26,6 +26,10 @@ if ( !function_exists('_cp_direct_file_access_checker')) :
             echo '<h3>php file prevent from direct access</h3>';
             echo '<small><a class="cp-btn cp-bg-warning" href="#">read more</a></small>';
             echo $html;
+            echo '<code>';
+            echo '<code>';
+            echo "if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly. }";
+            echo '</code>';
             echo '<br/>';
             echo '</div>';
         }
@@ -35,4 +39,3 @@ if ( !function_exists('_cp_direct_file_access_checker')) :
 
 
 endif;
-
