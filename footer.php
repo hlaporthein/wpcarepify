@@ -5,8 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<?php echo fly_get_attachment_image( 5, array( 500, 500 ), true ); ?>
-
 <?php wp_footer(); ?>
 
 </body>
